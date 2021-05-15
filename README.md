@@ -1,2 +1,2 @@
-# MDx-
+# MDx ++
 WordPress Theme MDx >> MDx ++
