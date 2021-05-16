@@ -4379,7 +4379,9 @@ body.mdui-theme-layout-dark input#s::placeholder {
     overflow: hidden;
     margin: 10px 0!important;
     display: block;
-    width: 100%
+    width: 100%;
+    box-shadow: 0 10px 30px 0px rgb(0 0 0 / 30%);
+    border-radius: 8px;
 }
 
 .wp-block-gallery .blocks-gallery-item .mdx-lazyload-container {
