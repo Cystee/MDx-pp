@@ -65,6 +65,43 @@ html {
     src: local("Unifont"), url("/fonts/MDx ++/DH.woff2");
 }
 
+.MathJax_Display {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 8px;
+}
+
+.MathJax {
+    outline: 0;
+    border-radius: 4px;
+}
+
+.MathJax_Display::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+}
+
+.ArtMain0 article h2 {
+    font-family: Minecraft, DH;
+}
+
+.ArtMain0 article h2:before {
+    content: "# ";
+    color: #536dfe;
+}
+
+.ArtMain0 article h3:before {
+    content: ">> ";
+    color: gray;
+}
+
+.prelink {
+    text-decoration: underline;
+    color: #999999;
+    font-size: 10pt;
+}
+
 body {
     font-family: -apple-system, "DH", "Minecraft", "Source Han Sans SC", "Noto Sans", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", "Source Han Sans CN", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
     --mdx-theme-color-with-white: var(--mdx-theme-color);
