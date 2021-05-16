@@ -35,7 +35,6 @@
 
 .mdui-dialog,
 .mdui-menu,
-.mdui-card,
 article div.mdui-panel.mdui-panel-gapless,
 .mdui-table-fluid,
 .mdx-author-c,
@@ -55,6 +54,10 @@ article.indexgaid,
 main .mdx-postlist-simple.mdx-postlist-simple-sta {
     border-radius: 8px!important;
     box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.3);
+}
+
+.mdui-card {
+    border-radius: 8px!important;
 }
 
 .mdx-first-simple .mdx-postlist-simple.mdx-postlist-simple-has-no-img {
