@@ -926,4 +926,56 @@ function mdx_add_editor_buttons($buttons) {
 }
 add_filter("mce_buttons_2", "mdx_add_editor_buttons");
 
+// 页面链接添加html后缀
+add_action('init', 'html_page_permalink', -1);
+function html_page_permalink() {
+    global $wp_rewrite;
+    if ( !strpos($wp_rewrite->get_page_permastruct(), '.html')){
+        $wp_rewrite->page_structure = $wp_rewrite->page_structure . '.html';
+    }
+}
+
+// 添加斜杠
+function nice_trailingslashit($string, $type_of_url) {
+    if ( $type_of_url != 'single' && $type_of_url != 'page' )
+      $string = trailingslashit($string);
+    return $string;
+}
+add_filter('user_trailingslashit', 'nice_trailingslashit', 10, 2);
+
+// 代码高亮 Prism.js
+ function add_prism() {
+        wp_register_style(
+            'prismCSS', 
+            get_stylesheet_directory_uri() . '/css/prism.css' //自定义路径
+         );
+          wp_register_script(
+            'prismJS',
+            get_stylesheet_directory_uri() . '/js/prism.js' //自定义路径
+         );
+        wp_enqueue_style('prismCSS');
+        wp_enqueue_script('prismJS');
+    }
+add_action('wp_enqueue_scripts', 'add_prism');
+
+//自定义按钮
+add_action( 'admin_init', 'my_tinymce_button' );
+
+function my_tinymce_button() {     //检查用户权限
+     if ( current_user_can( 'edit_posts' ) && current_user_can( 'edit_pages' ) ) {
+          add_filter( 'mce_buttons', 'my_register_tinymce_button' );
+          add_filter( 'mce_external_plugins', 'my_add_tinymce_button' );
+     }
+}
+//在编辑器上注册新按钮
+function my_register_tinymce_button( $buttons ) {
+     array_push( $buttons, "button_eek", "button_green" );
+     return $buttons;
+}
+//声明新按钮脚本
+function my_add_tinymce_button( $plugin_array ) {
+     $plugin_array['my_button_script'] = get_bloginfo('template_directory') . "/editor.js";  //此处为wp当前使用的主题的根目录，若在其他位置请自行更改
+     return $plugin_array;
+}
+
 ?>
