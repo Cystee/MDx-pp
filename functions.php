@@ -944,14 +944,14 @@ function nice_trailingslashit($string, $type_of_url) {
 add_filter('user_trailingslashit', 'nice_trailingslashit', 10, 2);
 
 // 代码高亮 Prism.js
- function add_prism() {
+function add_prism() {
         wp_register_style(
             'prismCSS', 
-            get_stylesheet_directory_uri() . '/css/prism.css' //自定义路径
+            get_stylesheet_directory_uri() . '/prism.css' //自定义路径
          );
           wp_register_script(
             'prismJS',
-            get_stylesheet_directory_uri() . '/js/prism.js' //自定义路径
+            get_stylesheet_directory_uri() . '/prism.js' //自定义路径
          );
         wp_enqueue_style('prismCSS');
         wp_enqueue_script('prismJS');
