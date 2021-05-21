@@ -102,10 +102,10 @@ html {
     font-size: 10pt;
 }
 
-.gallery-1 img,
-.gallery-2 img,
-.gallery-3 img,
-.gallery-4 img {
+#gallery-1 img,
+#gallery-2 img,
+#gallery-3 img,
+#gallery-4 img {
     border: 0!important;
 }
 
