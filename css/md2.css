@@ -41,7 +41,6 @@ article div.mdui-panel.mdui-panel-gapless,
 .mdx-hot-posts,
 .mdx-same-posts,
 .mdui-img-rounded,
-.links-co>a,
 .outOfSearch,
 .mdx-first-simple .mdx-hot-posts,
 .searchCard,
@@ -53,6 +52,11 @@ article.indexgaid,
 main .mdx-postlist-simple.mdx-postlist-simple-sta {
     border-radius: 8px!important;
     box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.3);
+}
+
+.links-co>a {
+    border-radius: 8px!important;
+    box-shadow: none;
 }
 
 .links-c {
