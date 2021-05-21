@@ -55,6 +55,11 @@ main .mdx-postlist-simple.mdx-postlist-simple-sta {
     box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.3);
 }
 
+.links-c {
+    border-radius: 8px!important;
+    box-shadow: none;
+}
+
 .mdui-card {
     border-radius: 8px!important;
 }
