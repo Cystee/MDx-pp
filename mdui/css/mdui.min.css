@@ -6538,7 +6538,7 @@ body.mdui-locked {
 
 .mdui-typo code {
     padding: 2px 6px;
-    color: #c7254e;
+    color: #007b9b;
     background-color: #f7f7f9;
     border-radius: 2px
 }
@@ -6617,7 +6617,6 @@ body.mdui-locked {
 .mdui-typo video {
     max-width: 100%;
     border-radius: 8px;
-    box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.3);
 }
 
 .mdui-typo figure {
@@ -6792,7 +6791,7 @@ body.mdui-locked {
 }
 
 .mdui-theme-layout-dark .mdui-typo code {
-    color: #ffcdd2;
+    color: #99cad7;
     background-color: #424242
 }
 
@@ -6832,7 +6831,7 @@ body.mdui-locked {
         color: rgba(255, 255, 255, .7)
     }
     .mdui-theme-layout-auto .mdui-typo code {
-        color: #ffcdd2;
+        color: #99cad7;
         background-color: #424242
     }
     .mdui-theme-layout-auto .mdui-typo pre {
