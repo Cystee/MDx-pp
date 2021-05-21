@@ -17,52 +17,52 @@ html {
 
 @font-face {
     font-family: Source Han Sans SC;
-    src: local("Source Han Sans SC"), local("Source Han Sans CN"), local("Noto Sans CJK SC"), local("Noto Sans"), url("/fonts/MDx ++/SourceHanSansSC-VF.otf.woff2");
+    src: local("Source Han Sans SC"), local("Source Han Sans CN"), local("Noto Sans CJK SC"), local("Noto Sans"), url("fonts/MDx ++/SourceHanSansSC-VF.otf.woff2");
 }
 
 @font-face {
     font-family: Monaco;
-    src: local("Monaco"), url("/fonts/MDx ++/Monaco.woff2");
+    src: local("Monaco"), url("fonts/MDx ++/Monaco.woff2");
 }
 
 @font-face {
     font-family: Consolas;
-    src: local("Consolas"), url("/fonts/MDx ++/Consolas.woff2");
+    src: local("Consolas"), url("fonts/MDx ++/Consolas.woff2");
     font-weight: normal;
 }
 
 @font-face {
     font-family: Consolas;
-    src: local("Consolas"), url("/fonts/MDx ++/Consolas-Bold.woff2");
+    src: local("Consolas"), url("fonts/MDx ++/Consolas-Bold.woff2");
     font-weight: bold;
 }
 
 @font-face {
     font-family: Consolas;
-    src: local("Consolas"), url("/fonts/MDx ++/Consolas-Italic.woff2");
+    src: local("Consolas"), url("fonts/MDx ++/Consolas-Italic.woff2");
     font-style: italic;
 }
 
 @font-face {
     font-family: Consolas;
-    src: local("Consolas"), url("/fonts/MDx ++/Consolas-BoldItalic.woff2");
+    src: local("Consolas"), url("fonts/MDx ++/Consolas-BoldItalic.woff2");
     font-style: italic;
     font-weight: bold;
 }
 
 @font-face {
     font-family: Minecraft;
-    src: local("Minecraft"), url("/fonts/MDx ++/MinecraftSeven.woff2");
+    src: local("Minecraft"), url("fonts/MDx ++/MinecraftSeven.woff2");
 }
 
 @font-face {
     font-family: MinecraftTen;
-    src: local("Minecraft"), url("/fonts/MDx ++/MinecraftTen.woff2");
+    src: local("Minecraft"), url("fonts/MDx ++/MinecraftTen.woff2");
 }
 
 @font-face {
     font-family: DH;
-    src: local("Unifont"), url("/fonts/MDx ++/DH.woff2");
+    src: local("Unifont"), url("fonts/MDx ++/DH.woff2");
 }
 
 .MathJax_Display {
@@ -100,6 +100,13 @@ html {
     text-decoration: underline;
     color: #999999;
     font-size: 10pt;
+}
+
+.gallery-1 img,
+.gallery-2 img,
+.gallery-3 img,
+.gallery-4 img {
+    border: 0!important;
 }
 
 body {
@@ -1483,7 +1490,7 @@ div#comments ul li {
     padding: 30px 20px 10px;
     width: 55%;
     max-width: 1800px;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: #ededed
 }
 
@@ -4088,7 +4095,7 @@ body.mdui-theme-layout-dark .mdx-index-img-bg {
 }
 
 body:not(.mdx-first-simple) .mdx-hot-posts {
-    border-radius: 0!important
+    border-radius: 0
 }
 
 body.mdx-first-simple .mdx-index-img-bg {
