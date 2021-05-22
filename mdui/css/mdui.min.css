@@ -6272,6 +6272,7 @@ body.mdui-locked {
 
 .mdui-typo-headline,
 .mdui-typo-headline-opacity {
+    font-family: MinecraftTen;
     font-weight: 400;
     font-size: 24px;
     -moz-osx-font-smoothing: grayscale
