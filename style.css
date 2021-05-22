@@ -15,10 +15,15 @@ html {
     min-height: 100%
 }
 
+
+/*
+
 @font-face {
     font-family: Source Han Sans SC;
     src: local("Source Han Sans SC"), local("Source Han Sans CN"), local("Noto Sans CJK SC"), local("Noto Sans"), url("fonts/MDx ++/SourceHanSansSC-VF.otf.woff2");
 }
+
+*/
 
 @font-face {
     font-family: Monaco;
