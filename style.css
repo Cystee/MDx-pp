@@ -26,6 +26,11 @@ html {
 */
 
 @font-face {
+    font-family: MI;
+    src: url("fonts/MDx ++/MI.woff");
+}
+
+@font-face {
     font-family: Monaco;
     src: local("Monaco"), url("fonts/MDx ++/Monaco.woff2");
 }
@@ -680,7 +685,7 @@ body.mdui-theme-layout-dark .ct1-p {
 }
 
 .mdx-clean-footer a.mdx-footer-title {
-    font-family: Minecraft;
+    font-family: MI;
     font-size: 35px;
     font-weight: 700;
     margin-top: 7px;
