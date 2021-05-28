@@ -978,4 +978,38 @@ function my_add_tinymce_button( $plugin_array ) {
      return $plugin_array;
 }
 
+// 禁用自动生成的图片尺寸
+function shapeSpace_disable_image_sizes($sizes) {
+unset($sizes['thumbnail']);    // disable thumbnail size
+unset($sizes['medium']);       // disable medium size 
+unset($sizes['large']);        // disable large size 
+unset($sizes['medium_large']); // disable medium-large size 
+unset($sizes['1536x1536']);    // disable 2x medium-large size 
+unset($sizes['2048x2048']);    // disable 2x large size return $sizes;
+}
+add_action('intermediate_image_sizes_advanced', 'shapeSpace_disable_image_sizes');
+// 禁用缩放尺寸
+add_filter('big_image_size_threshold', '__return_false');
+// 禁用其他图片尺寸
+function shapeSpace_disable_other_image_sizes() {
+remove_image_size('post-thumbnail'); // disable images added via set_post_thumbnail_size()  remove_image_size('another-size');   // disable any other added image sizes
+}
+add_action('init', 'shapeSpace_disable_other_image_sizes');
+
+//开启 WordPress 上传 webp 格式图片上传
+function mimvp_filter_mime_types( $array ) {
+    $array['webp'] = 'image/webp';
+    return $array; 
+}
+add_filter( 'mime_types', 'mimvp_filter_mime_types', 10, 1 );
+ 
+//开启 WordPress 预览 webp 缩略图预览
+function mimvp_file_is_displayable_image($result, $path) {
+    $info = @getimagesize( $path );
+    if($info['mime'] == 'image/webp') {
+        $result = true;
+    }
+    return $result;
+}
+add_filter( 'file_is_displayable_image', 'mimvp_file_is_displayable_image', 10, 2 );
 ?>
