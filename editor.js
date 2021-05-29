@@ -200,8 +200,8 @@
                         messageStyle: "none",\
                         jax: ["input/Tex", "output/HTML-CSS"], \
                         tex2jax: { \
-                            inlineMath: [ [\'\$\(\', \'\) \$ \'], ["\\(", "\\)"] ], \
-                            displayMath: [ [\'\$\$ \', \'\$\$ \'], ["\\[", "\\]"] ], \
+                            inlineMath: [ [\'\$\(\', \'\)\$\'], ["\\(", "\\)"] ], \
+                            displayMath: [ [\'\$\$\',\'\$\$\'], ["\\[", "\\]"] ], \
                             skipTags: ["script", "noscript", "style", "textarea", "pre", "code", "a", "kbd"] }, \
                         "HTML-CSS": { \
                             showMathMenu: false }, \
