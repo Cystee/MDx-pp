@@ -7,7 +7,7 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', '<?php if(!empty(mdx_get_option('ga'))){?><?php echo mdx_get_option('ga');?><?php }?>');
+  gtag('config', '<?php echo mdx_get_option('ga');?>');
 </script>
 <meta charset="<?php bloginfo('charset');?>">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=<?php if(mdx_get_option('mdx_allow_scale')=='false'){echo '1, user-scalable=no';}else{echo '5';}?>">

@@ -69,6 +69,7 @@ if((isset($_POST['mdx_ref']) && $_POST['mdx_ref'] == 'true') && check_admin_refe
     mdx_update_option('mdx_head_js', htmlentities(stripslashes($_POST['mdx_head_js'])));
     mdx_update_option('mdx_footer_js', htmlentities(stripslashes($_POST['mdx_footer_js'])));
     mdx_update_option('mdx_icp_num', sanitize_text_field($_POST['mdx_icp_num']));
+    mdx_update_option('ga', sanitize_text_field($_POST['ga']));
     mdx_update_option("mdx_use_cdn", sanitize_text_field($_POST['mdx_use_cdn']));
     mdx_update_option("mdx_custom_cdn_root", esc_url_raw($_POST['mdx_custom_cdn_root']));
     mdx_update_option("mdx_jquery", sanitize_text_field($_POST['mdx_jquery']));
@@ -663,8 +664,8 @@ wp_nonce_field('mdx_options_update');
     </td>
     </tr>
     <tr>
-    <th scope="row"><label for="mdx_icp_num"><?php _e('GA ID', 'mdx');?></label></th>
-    <td><input name="ga" type="text" value="<?php echo esc_attr(mdx_get_option('ga'))?>" class="regular-text">
+    <th scope="row"><label for="ga"><?php _e('GA ID', 'mdx');?></label></th>
+    <td><input name="ga" type="text" id="ga" value="<?php echo esc_attr(mdx_get_option('ga'))?>" class="regular-text">
     <p class="description"><?php _e('Analytics.', 'mdx');?></p></td>
     </tr>
 </tbody>
