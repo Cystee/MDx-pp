@@ -102,7 +102,7 @@
                         }
                     },
                     {
-                        text: '预格式链接',
+                        text: '预格式链接块',
                         onclick: function() {
                             ed.windowManager.open({
                                 title: '插入预格式链接',
@@ -119,7 +119,65 @@
                                 }
                             })
                         }
+                    },
+                    {
+                        text: '预格式行内链接',
+                        onclick: function() {
+                            ed.windowManager.open({
+                                title: '插入预格式链接',
+                                body: [{
+                                    type: 'textbox',
+                                    name: 'textboxCode',
+                                    multiline: true,
+                                    minWidth: 500,
+                                    minHeight: 100,
+                                    spellcheck: false
+                                }],
+                                onsubmit: function(e) {
+                                    ed.insertContent('<span class="prelink">' + ed.dom.encode(e.data.textboxCode) + '</span>');
+                                }
+                            })
+                        }
+                    },
+                    {
+                        text: 'MathJax',
+                        onclick: function() {
+                            ed.windowManager.open({
+                                title: '插入 MathJax 块',
+                                body: [{
+                                    type: 'textbox',
+                                    name: 'textboxCode',
+                                    multiline: true,
+                                    minWidth: 500,
+                                    minHeight: 100,
+                                    spellcheck: false
+                                }],
+                                onsubmit: function(e) {
+                                    ed.insertContent('$$' + ed.dom.encode(e.data.textboxCode) + '$$');
+                                }
+                            })
+                        }
+                    },
+                    {
+                        text: 'MathJax',
+                        onclick: function() {
+                            ed.windowManager.open({
+                                title: '插入行内 MathJax',
+                                body: [{
+                                    type: 'textbox',
+                                    name: 'textboxCode',
+                                    multiline: true,
+                                    minWidth: 500,
+                                    minHeight: 100,
+                                    spellcheck: false
+                                }],
+                                onsubmit: function(e) {
+                                    ed.insertContent('$(' + ed.dom.encode(e.data.textboxCode) + ')$');
+                                }
+                            })
+                        }
                     }
+
                 ]
             });
 
@@ -133,6 +191,13 @@
                     ed.selection.setContent('\t');
                 },
             });
+            ed.addButton('button_green', {
+                text: '引入 MathJax',
+                onclick: function() {
+                    ed.selection.setContent('<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML" async></script><script type="text/x-mathjax-config;executed=true">MathJax.Hub.Config({ showProcessingMessages: false, messageStyle: "none", jax: ["input/Tex", "output/HTML-CSS"], tex2jax: { inlineMath: [ [\'\$\(\', \'\) \$ \'], ["\\(", "\\)"] ], displayMath: [ [\'\$\$ \', \'\$\$ \'], ["\\[", "\\]"] ], skipTags: ["script", "noscript", "style", "textarea", "pre", "code", "a", "kbd"] }, "HTML-CSS": { showMathMenu: false }, TeX: { equationNumbers: { autoNumber: "AMS", useLabelIds: true } }, });</script>');
+                },
+            });
+
         },
         createControl: function(n, cm) {
             return null;
