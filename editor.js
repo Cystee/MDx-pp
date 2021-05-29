@@ -211,7 +211,7 @@
                         }, \
                     });\
                     </script>\
-                    <script src="..MathJax-2.7.8/MathJax.js?config=TeX-AMS_HTML" async></script>');
+                    <script src="./MathJax-2.7.8/MathJax.js?config=TeX-AMS_HTML" async></script>');
                 },
             });
 
