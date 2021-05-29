@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html <?php language_attributes();?>>
 <head><!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-197613995-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo mdx_get_option('ga');?>"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
