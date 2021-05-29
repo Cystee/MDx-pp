@@ -140,7 +140,7 @@
                         }
                     },
                     {
-                        text: 'MathJax',
+                        text: 'MathJax 块',
                         onclick: function() {
                             ed.windowManager.open({
                                 title: '插入 MathJax 块',
@@ -159,7 +159,7 @@
                         }
                     },
                     {
-                        text: 'MathJax',
+                        text: '行内 MathJax',
                         onclick: function() {
                             ed.windowManager.open({
                                 title: '插入行内 MathJax',
