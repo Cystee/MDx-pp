@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <html <?php language_attributes();?>>
-<head><!-- Global site tag (gtag.js) - Google Analytics -->
+<head><?php if(!empty(mdx_get_option('ga'))){?><!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo mdx_get_option('ga');?>"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -8,7 +8,7 @@
   gtag('js', new Date());
 
   gtag('config', '<?php echo mdx_get_option('ga');?>');
-</script>
+</script><?php }?>?>
 <meta charset="<?php bloginfo('charset');?>">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=<?php if(mdx_get_option('mdx_allow_scale')=='false'){echo '1, user-scalable=no';}else{echo '5';}?>">
 <?php if(mdx_get_option('mdx_speed_pre')=='true' && !is_404()){?>
