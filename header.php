@@ -1,6 +1,14 @@
 ﻿<!DOCTYPE html>
 <html <?php language_attributes();?>>
-<head>
+<head><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-197613995-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '<?php echo mdx_get_option('ga');?>');
+</script>
 <meta charset="<?php bloginfo('charset');?>">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=<?php if(mdx_get_option('mdx_allow_scale')=='false'){echo '1, user-scalable=no';}else{echo '5';}?>">
 <?php if(mdx_get_option('mdx_speed_pre')=='true' && !is_404()){?>

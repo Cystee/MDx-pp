@@ -662,5 +662,10 @@ wp_nonce_field('mdx_options_update');
         </fieldset>
     </td>
     </tr>
+    <tr>
+    <th scope="row"><label for="mdx_icp_num"><?php _e('GA ID', 'mdx');?></label></th>
+    <td><input name="ga" type="text" id="ga" value="<?php echo esc_attr(mdx_get_option('ga'))?>" class="regular-text">
+    <p class="description"><?php _e('Analytics.', 'mdx');?></p></td>
+    </tr>
 </tbody>
 </table><?php submit_button(); ?></form></div>
