@@ -194,8 +194,7 @@
             ed.addButton('button_green', {
                 text: '引入 MathJax',
                 onclick: function() {
-                    ed.selection.setContent('<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.8/MathJax.js?config=TeX-AMS_HTML" async></script>\
-                    <script type="text/x-mathjax-config;executed=true">\
+                    ed.selection.setContent('<script type="text/x-mathjax-config;executed=true">\
                     MathJax.Hub.Config({\
                         showProcessingMessages: false,\
                         messageStyle: "none",\
@@ -211,7 +210,8 @@
                             useLabelIds: true } \
                         }, \
                     });\
-                    </script>');
+                    </script>\
+                    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.8/MathJax.js?config=TeX-AMS_HTML" async></script>');
                 },
             });
 
