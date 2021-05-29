@@ -194,7 +194,7 @@
             ed.addButton('button_green', {
                 text: '引入 MathJax',
                 onclick: function() {
-                    ed.selection.setContent('<script type="text/x-mathjax-config;executed=true">\
+                    ed.selection.setContent('<script type="text/x-mathjax-config">\
                     MathJax.Hub.Config({\
                         showProcessingMessages: false,\
                         messageStyle: "none",\
