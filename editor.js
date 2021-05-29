@@ -194,7 +194,24 @@
             ed.addButton('button_green', {
                 text: '引入 MathJax',
                 onclick: function() {
-                    ed.selection.setContent('<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.8/MathJax.js?config=TeX-AMS_HTML" async></script><script type="text/x-mathjax-config;executed=true">MathJax.Hub.Config({ showProcessingMessages: false, messageStyle: "none", jax: ["input/Tex", "output/HTML-CSS"], tex2jax: { inlineMath: [ [\'\$\(\', \'\) \$ \'], ["\\(", "\\)"] ], displayMath: [ [\'\$\$ \', \'\$\$ \'], ["\\[", "\\]"] ], skipTags: ["script", "noscript", "style", "textarea", "pre", "code", "a", "kbd"] }, "HTML-CSS": { showMathMenu: false }, TeX: { equationNumbers: { autoNumber: "AMS", useLabelIds: true } }, });</script>');
+                    ed.selection.setContent('<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.8/MathJax.js?config=TeX-AMS_HTML" async></script>\
+                    <script type="text/x-mathjax-config;executed=true">\
+                    MathJax.Hub.Config({\
+                        showProcessingMessages: false,\
+                        messageStyle: "none",\
+                        jax: ["input/Tex", "output/HTML-CSS"], \
+                        tex2jax: { \
+                            inlineMath: [ [\'\$\(\', \'\) \$ \'], ["\\(", "\\)"] ], \
+                            displayMath: [ [\'\$\$ \', \'\$\$ \'], ["\\[", "\\]"] ], \
+                            skipTags: ["script", "noscript", "style", "textarea", "pre", "code", "a", "kbd"] }, \
+                        "HTML-CSS": { \
+                            showMathMenu: false }, \
+                        TeX: { equationNumbers: { \
+                            autoNumber: "AMS", \
+                            useLabelIds: true } \
+                        }, \
+                    });\
+                    </script>');
                 },
             });
 
