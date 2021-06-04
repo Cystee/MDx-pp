@@ -951,7 +951,7 @@ function add_prism() {
          );
           wp_register_script(
             'prismJS',
-            get_stylesheet_directory_uri() . '/prism.js' //自定义路径
+            get_stylesheet_directory_uri() . '/prism.min.js' //自定义路径
          );
         wp_enqueue_style('prismCSS');
         wp_enqueue_script('prismJS');
