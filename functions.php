@@ -947,7 +947,7 @@ add_filter('user_trailingslashit', 'nice_trailingslashit', 10, 2);
 function add_prism() {
         wp_register_style(
             'prismCSS', 
-            get_stylesheet_directory_uri() . '/prism.css' //自定义路径
+            get_stylesheet_directory_uri() . '/prism.min.css' //自定义路径
          );
           wp_register_script(
             'prismJS',
