@@ -73,6 +73,7 @@ if((isset($_POST['mdx_ref']) && $_POST['mdx_ref'] == 'true') && check_admin_refe
     mdx_update_option("mdx_use_cdn", sanitize_text_field($_POST['mdx_use_cdn']));
     mdx_update_option("mdx_custom_cdn_root", esc_url_raw($_POST['mdx_custom_cdn_root']));
     mdx_update_option("mdx_jquery", sanitize_text_field($_POST['mdx_jquery']));
+    mdx_update_option("jquery_pp", sanitize_text_field($_POST['jquery_pp']));
 ?>
 <div class="notice notice-success is-dismissible">
 <p><?php _e('设置已保存。', 'mdx'); ?></p>
@@ -667,6 +668,17 @@ wp_nonce_field('mdx_options_update');
     <th scope="row"><label for="ga"><?php _e('GA ID', 'mdx');?></label></th>
     <td><input name="ga" type="text" id="ga" value="<?php echo esc_attr(mdx_get_option('ga'))?>" class="regular-text">
     <p class="description"><?php _e('Analytics.', 'mdx');?></p></td>
+    </tr>
+    <tr>
+    <th scope="row"><?php _e('jQuery pp', 'mdx');?></th>
+    <td>
+    <?php $mdxpp_v_jquery=mdx_get_option('jquery_pp');?>
+        <fieldset>
+        <label><input type="radio" name="jquery_pp" value="true" <?php if($mdxpp_v_jquery=='true'){?>checked="checked"<?php }?>> <?php echo $trueon;?></label><br>
+        <label><input type="radio" name="jquery_pp" value="false" <?php if($mdxpp_v_jquery=='false'){?>checked="checked"<?php }?>> <?php echo $falseoff;?></label><br>
+        <p class="description"><?php _e('jquery_pp', 'mdx');?></p>
+        </fieldset>
+    </td>
     </tr>
 </tbody>
 </table><?php submit_button(); ?></form></div>

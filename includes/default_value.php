@@ -53,6 +53,7 @@ $mdx_default_values = array(
     'mdx_footer_js' => '',
     'mdx_icp_num' => !empty(get_option('zh_cn_l10n_icp_num')) ? get_option('zh_cn_l10n_icp_num') : '',
     'ga'=> '',
+    'jquery_pp'=> 'false',
     'mdx_use_cdn' => 'none',
     'mdx_custom_cdn_root' => '',
     'mdx_jquery' => 'false',
