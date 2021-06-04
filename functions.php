@@ -1012,4 +1012,10 @@ function mimvp_file_is_displayable_image($result, $path) {
     return $result;
 }
 add_filter( 'file_is_displayable_image', 'mimvp_file_is_displayable_image', 10, 2 );
+
+//mdxpps jquery
+if(mdx_get_option("jquery_pp") === "true"){
+    wp_enqueue_script("jquery");
+}
+
 ?>
