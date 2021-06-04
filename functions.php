@@ -172,6 +172,10 @@ function mdx_js(){
         wp_register_script('mdx_jquery', $files_root.'/js/jquery.min.js', false, '', true);
         wp_enqueue_script('mdx_jquery');
     }
+    if(mdx_get_option("mdx_jquery") === "false"){
+        wp_register_script('mdx_jquery', $files_root.'/js/jquery.min.js', false, '', true);
+        wp_enqueue_script('mdx_jquery');
+    }
     wp_register_script('mdx_mdui_js', $files_root.'/mdui/js/mdui.min.js', false, '', true);
     wp_register_script('mdx_common', $files_root.'/js/common.js', false, '', true);
     wp_register_script('mdx_sl_js', $files_root.'/js/lazyload.js', false, '', true);
