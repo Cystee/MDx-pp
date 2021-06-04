@@ -191,27 +191,10 @@
                     ed.selection.setContent('\t');
                 },
             });
-            ed.addButton('button_green', {
+            ed.addButton('button_MJ', {
                 text: '引入 MathJax',
                 onclick: function() {
-                    ed.selection.setContent('<script type="text/x-mathjax-config">\
-                    MathJax.Hub.Config({\
-                        showProcessingMessages: false,\
-                        messageStyle: "none",\
-                        jax: ["input/Tex", "output/HTML-CSS"], \
-                        tex2jax: { \
-                            inlineMath: [ [\'\$\(\',\'\)\$\'], ["\\(","\\)"] ], \
-                            displayMath: [ [\'\$\$\',\'\$\$\'], ["\\[","\\]"] ], \
-                            skipTags: ["script", "noscript", "style", "textarea", "pre", "code", "a", "kbd"] }, \
-                        "HTML-CSS": { \
-                            showMathMenu: false }, \
-                        TeX: { equationNumbers: { \
-                            autoNumber: "AMS", \
-                            useLabelIds: true } \
-                        }, \
-                    });\
-                    </script>\
-                    <script src="wp-content/themes/mdx/MathJax-2.7.8/MathJax.js?config=TeX-AMS_HTML" async></script>');
+                    ed.selection.setContent('<script type="text/x-mathjax-config">MathJax.Hub.Config({showProcessingMessages:false,messageStyle:"none",jax:["input/Tex","output/HTML-CSS"],tex2jax:{inlineMath:[[\'\$\(\',\'\)\$\'],["\\(","\\)"]],displayMath:[[\'\$\$\',\'\$\$\'],["\\[","\\]"]],skipTags:["script","noscript","style","textarea","pre","code","a","kbd"]},"HTML-CSS":{showMathMenu:false},TeX:{equationNumbers:{autoNumber:"AMS",useLabelIds:true}},});</script><script src="wp-content/themes/mdx/MathJax-2.7.8/MathJax.js?config=TeX-AMS_HTML" async></script>');
                 },
             });
 

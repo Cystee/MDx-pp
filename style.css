@@ -43,19 +43,19 @@ html {
 
 @font-face {
     font-family: Consolas;
-    src: local("Consolas"), url("fonts/MDx ++/Consolas-Bold.woff2");
+    src: url("fonts/MDx ++/Consolas-Bold.woff2");
     font-weight: bold;
 }
 
 @font-face {
     font-family: Consolas;
-    src: local("Consolas"), url("fonts/MDx ++/Consolas-Italic.woff2");
+    src: url("fonts/MDx ++/Consolas-Italic.woff2");
     font-style: italic;
 }
 
 @font-face {
     font-family: Consolas;
-    src: local("Consolas"), url("fonts/MDx ++/Consolas-BoldItalic.woff2");
+    src: url("fonts/MDx ++/Consolas-BoldItalic.woff2");
     font-style: italic;
     font-weight: bold;
 }

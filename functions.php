@@ -969,7 +969,7 @@ function my_tinymce_button() {     //检查用户权限
 }
 //在编辑器上注册新按钮
 function my_register_tinymce_button( $buttons ) {
-     array_push( $buttons, "button_eek", "button_green" );
+     array_push( $buttons, "button_eek", "button_green","button_MJ" );
      return $buttons;
 }
 //声明新按钮脚本
