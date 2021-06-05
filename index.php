@@ -231,7 +231,7 @@ if(mdx_get_option('mdx_index_head_style') === "slide"){
             </div>
         <?php }?>
         </div>
-        <?php if(mdx_get_option('mdx_all_posts_text') !== ''){ ?><h2 class="mdx-all-posts"><?php echo mdx_get_option('mdx_all_posts_text');?> <i class="mdui-icon material-icons mdui-text-color-theme-accent">&#xe5c8;</i></h2><?php } ?>
+        <?php if(mdx_get_option('mdx_all_posts_text') !== ''){ ?><h3 class="mdx-all-posts"><?php echo mdx_get_option('mdx_all_posts_text');?><i class="mdui-icon material-icons mdui-text-color-theme-accent">&#xe5c8;</i></h3><?php } ?>
     <?php }?>
     <main class="postList mdui-center" id="postlist">
     <?php
