@@ -100,7 +100,7 @@ if(mdx_get_option('mdx_index_head_style') === "slide"){
                     }
                 ?></span>
                 <hr>
-                <?php echo esc_attr(mdx_get_option('mdx_index_say'))?><h2 class="mdui-center">GO</h2>
+                <?php echo esc_attr(mdx_get_option('mdx_index_say'))?>
             </div>
         </div>
     </div>
