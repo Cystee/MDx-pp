@@ -6525,11 +6525,13 @@ body.mdui-locked {
 }
 
 .mdui-typo h4 {
-    font-size: 1.4em
+    font-size: 1.4em;
+    margin-left: 1.75em
 }
 
 .mdui-typo h5 {
-    font-size: 1.2em
+    font-size: 1.2em;
+    margin-left: 3.5em
 }
 
 .mdui-typo h6 {
