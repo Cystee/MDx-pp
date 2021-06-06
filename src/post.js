@@ -41,6 +41,7 @@ window.addEventListener('resize', () => {
     winheight = window.innerHeight;
     winwidth = document.body.clientWidth;
 })
+
 function scrollDiff() {
     var howFar = document.documentElement.scrollTop || document.body.scrollTop;
     if (howFar > 20 & whetherChange == 0 && !postStyle2) {
@@ -225,10 +226,12 @@ function mdx_shortcode() {
         }
     }
 }
+
 function GetQueryString(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
     var r = window.location.search.substr(1).match(reg);
-    if (r != null) return unescape(r[2]); return null;
+    if (r != null) return unescape(r[2]);
+    return null;
 }
 
 function mdxGitHubInfo(i) {
@@ -247,8 +250,8 @@ function mdxGitHubInfo(i) {
         }
         const targetEle = document.getElementsByClassName("mdx-github-cot")[i];
         targetEle.innerHTML = `<div class="mdx-github-main"><a href="https://github.com/" ref="nofollow" target="_blank" class="gh-link" title="GitHub"><svg class="icon mdx-github-icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><defs><style/></defs><path d="M950.93 512q0 143.43-83.75 257.97T650.9 928.55q-15.43 2.85-22.6-4.02t-7.17-17.12V786.87q0-55.44-29.7-81.11 32.55-3.44 58.6-10.32t53.68-22.3T750 635.1t30.28-59.98 11.7-86.01q0-69.12-45.13-117.7 21.14-52-4.53-116.58-16.02-5.12-46.3 6.29t-52.6 25.16l-21.72 13.68Q568.54 285.1 512 285.1t-109.71 14.85q-9.15-6.3-24.29-15.43t-47.69-22.02-49.15-7.68q-25.16 64.58-4.02 116.59Q232 419.99 232 489.1q0 48.56 11.7 85.72t30 59.98 46 38.25 53.68 22.3 58.6 10.32q-22.83 20.56-28.02 58.88-12 5.7-25.75 8.56t-32.55 2.85-37.45-12.29T276.48 728q-10.83-18.28-27.72-29.7t-28.3-13.67l-11.42-1.69q-12 0-16.6 2.56t-2.85 6.59 5.12 7.97 7.46 6.88l4.02 2.85q12.58 5.7 24.87 21.72t18 29.11l5.7 13.17q7.46 21.72 25.16 35.1T318.17 826t39.72 4.03 31.74-1.98l13.17-2.27q0 21.73.29 50.84t.3 30.86q0 10.32-7.47 17.12t-22.82 4.02Q240.57 884.6 156.82 770.05T73.07 512.07q0-119.44 58.88-220.3t159.74-159.75T512 73.14t220.3 58.88 159.75 159.75 58.88 220.3z" fill="#fff"/></svg> <span>GitHub</span></a><br><a href="https://github.com/${targetEle.dataset.mdxgithuba}/${targetEle.dataset.mdxgithubp}" ref="nofollow" target="_blank" class="repo-link"><span>${targetEle.dataset.mdxgithuba}/</span>${targetEle.dataset.mdxgithubp}</a>${githubHomepage}<br><br>★ ${dataStars}<a href="https://github.com/${targetEle.dataset.mdxgithuba}/${targetEle.dataset.mdxgithubp}" ref="nofollow" target="_blank" class="repo-link mdx-github-arrow"><i class="mdui-icon material-icons" title="${mdx_github_i18n_1}">&#xe5c8;</i></a></div>`;
-    }).catch((function (x) {
-        return function () {
+    }).catch((function(x) {
+        return function() {
             document.getElementsByClassName("mdx-github-cot")[x].getElementsByClassName("mdx-github-wait-out")[0].innerHTML = `${mdx_github_i18n_2} <a rel="nofollow" target="_blank" href="https://github.com/${document.getElementsByClassName("mdx-github-cot")[x].dataset.mdxgithuba}/${document.getElementsByClassName("mdx-github-cot")[x].dataset.mdxgithubp}">https://github.com/${document.getElementsByClassName("mdx-github-cot")[x].dataset.mdxgithuba}/${document.getElementsByClassName("mdx-github-cot")[x].dataset.mdxgithubp}</a>`;
         }
     })(i));
@@ -288,22 +291,22 @@ function mdxAjaxPost(i) {
             document.getElementsByClassName("mdx-post-cot")[i].style.border = "0 solid #dadada";
         }
         document.getElementsByClassName("mdx-post-cot")[i].innerHTML = `<div class="mdx-post-main"><a href="${url}" ref="nofollow" class="post-link">${title}</a><br>${desc}<br><br><a href="${url}" ref="nofollow" class="arrow-link mdx-github-arrow"><i class="mdui-icon material-icons" title="${mdx_post_i18n_2}">&#xe5c8;</i></a></div>${imgDiv}`;
-    }).catch((function (x) {
-        return function () {
+    }).catch((function(x) {
+        return function() {
             document.getElementsByClassName("mdx-post-cot")[x].getElementsByClassName("mdx-github-wait-out")[0].innerHTML = `${mdx_post_i18n_3} <a rel="nofollow" href="${document.getElementsByClassName("mdx-post-cot")[x].dataset.mdxposturl}">${document.getElementsByClassName("mdx-post-cot")[x].dataset.mdxposturl}</a>`;
         }
     })(i))
 }
 
 //Scroll To the Top
-document.getElementsByClassName("scrollToTop")[0].addEventListener("click", function () {
+document.getElementsByClassName("scrollToTop")[0].addEventListener("click", function() {
     HTMLScrollTo.to(0, 500);
 }, false);
 
 //Night Styles
 var nsButton = document.getElementById("tgns");
 if (nsButton) {
-    document.getElementById("tgns").addEventListener("click", function () {
+    document.getElementById("tgns").addEventListener("click", function() {
         if (!document.getElementsByTagName("body")[0].classList.contains("mdui-theme-layout-dark")) {
             sessionStorage.setItem('ns_night-styles', 'true');
             if (colorEnabled) {
@@ -322,7 +325,7 @@ if (nsButton) {
 var lazyloadImg = document.querySelectorAll("article > *:not(figure) figure:not(.wp-block-image) img, article > figure:not(.wp-block-image) > img, article > figure.wp-block-gallery > ul > li > figure > a > figure > img");
 if (lazyloadImg.length) {
     for (let el of lazyloadImg) {
-        el.addEventListener('lazyloaded', function (e) {
+        el.addEventListener('lazyloaded', function(e) {
             setTimeout(() => {
                 var prevDom;
                 if (e.target.previousSibling) {
@@ -341,7 +344,7 @@ if (lazyloadImg.length) {
 var lazyloadImg2 = document.querySelectorAll("article > figure.wp-block-image > figure.mdx-lazyload-container img");
 if (lazyloadImg2.length) {
     for (let el of lazyloadImg2) {
-        el.addEventListener('lazyloaded', function (e) {
+        el.addEventListener('lazyloaded', function(e) {
             var prevDom;
             if (e.target.previousSibling) {
                 prevDom = e.target.previousSibling;
@@ -358,7 +361,7 @@ if (lazyloadImg2.length) {
 var lazyloadImg3 = document.querySelectorAll("article > figure.wp-block-image > img, article > figure.wp-block-image > a > img");
 if (lazyloadImg3.length) {
     for (let el of lazyloadImg3) {
-        el.addEventListener('lazyloaded', function (e) {
+        el.addEventListener('lazyloaded', function(e) {
             if (!e.target.previousSibling) {
                 e.target.parentNode.classList.add("mdx-img-loaded-no-anim");
             }
@@ -368,93 +371,94 @@ if (lazyloadImg3.length) {
 };
 
 window.addEventListener('DOMContentLoaded', () => {
-    if (mdx_comment_ajax && ele('#comments-navi>a.prev').getAttribute('href')) {
-        ele('#comments-navi').innerHTML = `<button class="mdx-more-comments mdui-btn mdui-btn-icon mdui-color-theme-accent mdui-ripple" mdui-tooltip="{content: '${morecomment}'}" data-comment-url="${ele('#comments-navi>a.prev').getAttribute('href')}"><i class="mdui-icon material-icons">keyboard_arrow_down</i></button>`;
-        mdui.$('ul.mdui-list.ajax-comments').mutation();
-    }
-
-    if (document.querySelectorAll('#comments > ul').length == 0) {
-        ele('.ArtMain0 #respond', (e) => { e.style.borderRadius = '0 0 8px 8px' });
-        ele('.ArtMain0 .mdx-comment-login-needed', (e) => { e.style.borderRadius = '0 0 8px 8px' });
-    }
-
-    if (ifOffline) {
-        ele('#respond').innerHTML = tipMutiOffRes;
-    }
-
-    ele('article a > figure > img.lazyload, article > figure > img.lazyload, article a > figure > img.lazyloaded, article > figure > img.lazyloaded, article a > figure > img.lazyloading, article > figure > img.lazyloading', (e) => {
-        if (e.classList.contains("aligncenter")) {
-            e.parentNode.classList.add("aligncenter");
-        } else if (e.classList.contains("alignright")) {
-            e.parentNode.classList.add("alignright");
-            let insertDOM = document.createElement("div");
-            insertDOM.classList.add("mdx-clear-float");
-            e.parentNode.parentNode.insertBefore(insertDOM, e.parentNode.nextSibling);
-        } else if (e.classList.contains("alignleft")) {
-            e.parentNode.classList.add("alignleft");
-        }
-    });
-
-    //ImgBox
-    if (mdx_imgBox == 1) {
-        ele('article a > img', (e) => {
-            var imgUrlEach = e.getAttribute('src');
-            if (imgUrlEach == 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' || imgUrlEach == 'data:image/gif;base64,R0lGODlhAgABAIAAALGxsQAAACH5BAAAAAAALAAAAAACAAEAAAICBAoAOw==') {
-                imgUrlEach = e.getAttribute('data-src').split("?")[0];
+            if (mdx_comment_ajax && ele('#comments-navi>a.prev').getAttribute('href')) {
+                ele('#comments-navi').innerHTML = `<button class="mdx-more-comments mdui-btn mdui-btn-icon mdui-color-theme-accent mdui-ripple" mdui-tooltip="{content: '${morecomment}'}" data-comment-url="${ele('#comments-navi>a.prev').getAttribute('href')}"><i class="mdui-icon material-icons">keyboard_arrow_down</i></button>`;
+                mdui.$('ul.mdui-list.ajax-comments').mutation();
             }
-            var imgHrefa = e.parentNode.getAttribute('href').replace(/(-scaled)*\.[^.]+$/, '-');
-            if (imgUrlEach.indexOf(imgHrefa) != -1 || imgUrlEach == e.parentNode.getAttribute('href') || imgUrlEach == e.parentNode.getAttribute('href') + "-towebp") {
-                e.classList.add("mdx-img-in-post");
-                let wrapper = e.parentNode;
-                for (let el of wrapper.childNodes) {
-                    wrapper.parentNode.insertBefore(el, wrapper);
-                }
-                wrapper.parentNode.removeChild(wrapper);
-            } else {
-                e.parentNode.classList.add('mdx-img-in-post-with-link');
+
+            if (document.querySelectorAll('#comments > ul').length == 0) {
+                ele('.ArtMain0 #respond', (e) => { e.style.borderRadius = '0 0 8px 8px' });
+                ele('.ArtMain0 .mdx-comment-login-needed', (e) => { e.style.borderRadius = '0 0 8px 8px' });
             }
-        });
-        ele('article a > figure > img.lazyload, article a > figure > img.lazyloaded, article a > figure > img.lazyloading', (e) => {
-            var imgUrlEach = e.getAttribute('src');
-            if (imgUrlEach == 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' || imgUrlEach == 'data:image/gif;base64,R0lGODlhAgABAIAAALGxsQAAACH5BAAAAAAALAAAAAACAAEAAAICBAoAOw==') {
-                imgUrlEach = e.getAttribute('data-src').split("?")[0];
+
+            if (ifOffline) {
+                ele('#respond').innerHTML = tipMutiOffRes;
             }
-            var imgHrefa = e.parentNode.parentNode.getAttribute('href').replace(/(-scaled)*\.[^.]+$/, '-');
-            if (imgUrlEach.indexOf(imgHrefa) != -1 || imgUrlEach == e.parentNode.parentNode.getAttribute('href') || imgUrlEach == e.parentNode.parentNode.getAttribute('href') + '-towebp') {
-                e.classList.add('mdx-img-in-post');
-                let wrapper = e.parentNode.parentNode;
-                for (let el of wrapper.childNodes) {
-                    wrapper.parentNode.insertBefore(el, wrapper);
+
+            ele('article a > figure > img.lazyload, article > figure > img.lazyload, article a > figure > img.lazyloaded, article > figure > img.lazyloaded, article a > figure > img.lazyloading, article > figure > img.lazyloading', (e) => {
+                if (e.classList.contains("aligncenter")) {
+                    e.parentNode.classList.add("aligncenter");
+                } else if (e.classList.contains("alignright")) {
+                    e.parentNode.classList.add("alignright");
+                    let insertDOM = document.createElement("div");
+                    insertDOM.classList.add("mdx-clear-float");
+                    e.parentNode.parentNode.insertBefore(insertDOM, e.parentNode.nextSibling);
+                } else if (e.classList.contains("alignleft")) {
+                    e.parentNode.classList.add("alignleft");
                 }
-                wrapper.parentNode.removeChild(wrapper);
-            } else {
-                let wrapper = document.createElement('a');
-                wrapper.classList.add('mdx-img-in-post-with-link');
-                wrapper.setAttribute('href', e.parentNode.parentNode.getAttribute('href'));
-                e.parentNode.appendChild(wrapper);
-                wrapper.appendChild(e);
-                let raw_wrapper = e.parentNode.parentNode.parentNode;
-                for (let el of raw_wrapper.childNodes) {
-                    raw_wrapper.parentNode.insertBefore(el, raw_wrapper);
-                }
-                raw_wrapper.parentNode.removeChild(raw_wrapper);
-            }
-        });
-        ele('img.mdx-img-in-post', (el) => {
-            el.addEventListener('click', (e) => {
-                var toTopDes = e.target.getBoundingClientRect().top, toLeftDes = e.target.getBoundingClientRect().left;
-                var imgUrl = e.target.getAttribute('src');
-                if (imgUrl == 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' || imgUrl == 'data:image/gif;base64,R0lGODlhAgABAIAAALGxsQAAACH5BAAAAAAALAAAAAACAAEAAAICBAoAOw==') {
-                    imgUrl = e.target.getAttribute('data-src');
-                }
-                imgRaw = e.target;
-                imgRaw.style.opacity = 0;
-                ele('div.mdui-drawer', (e) => {
-                    e.insertAdjacentHTML('beforebegin', '<div id="img-box" class="mdui-valign"></div><div class="mdx-img-viewer"></div><div class="mdui-valign mdx-loading-img"><div class="mdui-center"><div class="mdui-spinner"></div></div></div>');
-                })
-                mdui.updateSpinners();
-                ele('.mdx-img-viewer', (elem) => {
-                    elem.innerHTML += `<img src="${e.target.getAttribute("src")}" style="top:${toTopDes}px;left:${toLeftDes}px;width:${e.target.getBoundingClientRect().width}px;height:${e.target.getBoundingClientRect().height}px;" data-raww="${e.target.getBoundingClientRect().width}" data-rawh="${e.target.getBoundingClientRect().height}" data-post="${toTopDes}" data-posl="${toLeftDes}">${(e.target.getAttribute('alt') !== '' && e.target.getAttribute('alt') !== e.target.dataset.src) ? `<div class="image-view-alt">${mdx_img_alt && e.target.getAttribute('alt').replace(/[<>&"]/g, (c) => {return {'<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;'}[c]})}</div>` : ''}`;
+            });
+
+            //ImgBox
+            if (mdx_imgBox == 1) {
+                ele('article a > img', (e) => {
+                    var imgUrlEach = e.getAttribute('src');
+                    if (imgUrlEach == 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' || imgUrlEach == 'data:image/gif;base64,R0lGODlhAgABAIAAALGxsQAAACH5BAAAAAAALAAAAAACAAEAAAICBAoAOw==') {
+                        imgUrlEach = e.getAttribute('data-src').split("?")[0];
+                    }
+                    var imgHrefa = e.parentNode.getAttribute('href').replace(/(-scaled)*\.[^.]+$/, '-');
+                    if (imgUrlEach.indexOf(imgHrefa) != -1 || imgUrlEach == e.parentNode.getAttribute('href') || imgUrlEach == e.parentNode.getAttribute('href') + "-towebp") {
+                        e.classList.add("mdx-img-in-post");
+                        let wrapper = e.parentNode;
+                        for (let el of wrapper.childNodes) {
+                            wrapper.parentNode.insertBefore(el, wrapper);
+                        }
+                        wrapper.parentNode.removeChild(wrapper);
+                    } else {
+                        e.parentNode.classList.add('mdx-img-in-post-with-link');
+                    }
+                });
+                ele('article a > figure > img.lazyload, article a > figure > img.lazyloaded, article a > figure > img.lazyloading', (e) => {
+                    var imgUrlEach = e.getAttribute('src');
+                    if (imgUrlEach == 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' || imgUrlEach == 'data:image/gif;base64,R0lGODlhAgABAIAAALGxsQAAACH5BAAAAAAALAAAAAACAAEAAAICBAoAOw==') {
+                        imgUrlEach = e.getAttribute('data-src').split("?")[0];
+                    }
+                    var imgHrefa = e.parentNode.parentNode.getAttribute('href').replace(/(-scaled)*\.[^.]+$/, '-');
+                    if (imgUrlEach.indexOf(imgHrefa) != -1 || imgUrlEach == e.parentNode.parentNode.getAttribute('href') || imgUrlEach == e.parentNode.parentNode.getAttribute('href') + '-towebp') {
+                        e.classList.add('mdx-img-in-post');
+                        let wrapper = e.parentNode.parentNode;
+                        for (let el of wrapper.childNodes) {
+                            wrapper.parentNode.insertBefore(el, wrapper);
+                        }
+                        wrapper.parentNode.removeChild(wrapper);
+                    } else {
+                        let wrapper = document.createElement('a');
+                        wrapper.classList.add('mdx-img-in-post-with-link');
+                        wrapper.setAttribute('href', e.parentNode.parentNode.getAttribute('href'));
+                        e.parentNode.appendChild(wrapper);
+                        wrapper.appendChild(e);
+                        let raw_wrapper = e.parentNode.parentNode.parentNode;
+                        for (let el of raw_wrapper.childNodes) {
+                            raw_wrapper.parentNode.insertBefore(el, raw_wrapper);
+                        }
+                        raw_wrapper.parentNode.removeChild(raw_wrapper);
+                    }
+                });
+                ele('img.mdx-img-in-post', (el) => {
+                            el.addEventListener('click', (e) => {
+                                        var toTopDes = e.target.getBoundingClientRect().top,
+                                            toLeftDes = e.target.getBoundingClientRect().left;
+                                        var imgUrl = e.target.getAttribute('src');
+                                        if (imgUrl == 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' || imgUrl == 'data:image/gif;base64,R0lGODlhAgABAIAAALGxsQAAACH5BAAAAAAALAAAAAACAAEAAAICBAoAOw==') {
+                                            imgUrl = e.target.getAttribute('data-src');
+                                        }
+                                        imgRaw = e.target;
+                                        imgRaw.style.opacity = 0;
+                                        ele('div.mdui-drawer', (e) => {
+                                            e.insertAdjacentHTML('beforebegin', '<div id="img-box" class="mdui-valign"></div><div class="mdx-img-viewer"></div><div class="mdui-valign mdx-loading-img"><div class="mdui-center"><div class="mdui-spinner"></div></div></div>');
+                                        })
+                                        mdui.updateSpinners();
+                                        ele('.mdx-img-viewer', (elem) => {
+                                                    elem.innerHTML += `<img src="${e.target.getAttribute("src")}" style="top:${toTopDes}px;left:${toLeftDes}px;width:${e.target.getBoundingClientRect().width}px;height:${e.target.getBoundingClientRect().height}px;" data-raww="${e.target.getBoundingClientRect().width}" data-rawh="${e.target.getBoundingClientRect().height}" data-post="${toTopDes}" data-posl="${toLeftDes}">${(e.target.getAttribute('alt') !== '' && e.target.getAttribute('alt') !== e.target.dataset.src) ? `<div class="image-view-alt">${mdx_img_alt && e.target.getAttribute('alt').replace(/[<>&"]/g, (c) => {return {'<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;'}[c]})}</div>` : ''}`;
                 })
                 ele('#img-box').style.display = "flex";
                 ele('#img-box').style.opacity = 1;
@@ -654,7 +658,7 @@ window.addEventListener('DOMContentLoaded', () => {
     var inputId = ele('form.post-password-form p > label > input').getAttribute('id');
     const passwordForm = document.querySelectorAll('form.post-password-form p');
     if (passwordForm.length > 0) {
-        passwordForm[1].innerHTML = `<div class="mdui-textfield mdui-textfield-floating-label inpass"><label class="mdui-textfield-label">${mdx_i18n_password}</label><input class="mdui-textfield-input" type="password" name="post_password" id="${inputId}"></div>'`;
+        passwordForm[1].innerHTML = `<div class="mdui-textfield mdui-textfield-floating-label inpass"><label class="mdui-textfield-label">${mdx_i18n_password}</label><input class="mdui-textfield-input" type="password" name="post_password" id="${inputId}"></div>`;
     }
 
     if (document.getElementsByTagName("body")[0].classList.contains("mdx-reduce-motion")) {
