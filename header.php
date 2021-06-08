@@ -25,6 +25,7 @@ global $files_root;
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <?php if(mdx_get_option('mdx_safari')=="true"){?>
 <link rel="mask-icon" href="<?php echo mdx_get_option('mdx_svg');?>" color="<?php echo mdx_get_option('mdx_svg_color');?>">
+<link rel="manifest" href="<?php echo $files_root;?>/manifest.json">
 <?php }?>
 <?php if(mdx_get_option("mdx_title_med") == "diy"){?>
 <title itemprop="name"><?php global $page, $paged;wp_title('-', true, 'right');
