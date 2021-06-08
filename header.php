@@ -21,11 +21,6 @@ global $files_root;
 <?php if(mdx_get_option('mdx_md2')=="true" && mdx_get_option('mdx_md2_font')=="true"){?>
 <link rel="preload" href="<?php echo $files_root;?>/fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="<?php echo $files_root;?>/fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo $files_root;?>/fonts/MDx ++/Consolas.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo $files_root;?>/fonts/MDx ++/DH.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo $files_root;?>/fonts/MDx ++/MinecraftSeven.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo $files_root;?>/fonts/MDx ++/Monaco.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="<?php echo $files_root;?>/fonts/MDx ++/MI.woff" as="font" type="font/woff" crossorigin>
 <?php }}?>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <?php if(mdx_get_option('mdx_safari')=="true"){?>
