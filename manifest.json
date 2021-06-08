@@ -3,8 +3,8 @@
     "description": "Web App for Site Cusalt!",
     "display": "standalone",
     "start_url": "/",
-    "theme_color": "gray",
-    "background_color": "gray",
+    "theme_color": "#009688",
+    "background_color": "#009688",
     "icons": [
         {
             "src": "icon/appicon.png",
