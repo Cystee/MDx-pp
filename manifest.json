@@ -1,5 +1,6 @@
 {
-    "name": "Cusalt!",
+    "name": "Cusalt! • 应用程序",
+    "short_name": "Cusalt!",
     "description": "Web App for Site Cusalt!",
     "display": "standalone",
     "start_url": "/",
