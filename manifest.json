@@ -8,7 +8,7 @@
     "icons": [
         {
             "src": "icon/appicon.png",
-            "sizes": "512x5122"
+            "sizes": "512x512"
         }
     ]
 }
