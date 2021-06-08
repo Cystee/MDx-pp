@@ -37,6 +37,33 @@
                         }
                     },
                     {
+                        text: '其他语言行内代码',
+                        onclick: function () {
+                            ed.windowManager.open({
+                                title: '插入其他语言行内代码',
+                                body: [{
+                                    type: 'textbox',
+                                    name: 'textboxName',
+                                    label: '语言',
+                                    value: 'python'
+                                },
+                                {
+                                    type: 'textbox',
+                                    name: 'textboxCode',
+                                    label: '代码',
+                                    multiline: true,
+                                    minWidth: 500,
+                                    minHeight: 100,
+                                    spellcheck: false
+                                }
+                                ],
+                                onsubmit: function (e) {
+                                    ed.insertContent('<code class="language-' + e.data.textboxName + '">' + ed.dom.encode(e.data.textboxCode) + '</code>');
+                                }
+                            })
+                        }
+                    },
+                    {
                         text: 'HTML 代码块',
                         onclick: function() {
                             ed.windowManager.open({
@@ -51,33 +78,6 @@
                                 }],
                                 onsubmit: function(e) {
                                     ed.insertContent('<pre><code class="language-markup">' + ed.dom.encode(e.data.textboxCode) + '</code></pre>');
-                                }
-                            })
-                        }
-                    },
-                    {
-                        text: '其他语言行内代码',
-                        onclick: function() {
-                            ed.windowManager.open({
-                                title: '插入其他语言行内代码',
-                                body: [{
-                                        type: 'textbox',
-                                        name: 'textboxName',
-                                        label: '语言',
-                                        value: 'python'
-                                    },
-                                    {
-                                        type: 'textbox',
-                                        name: 'textboxCode',
-                                        label: '代码',
-                                        multiline: true,
-                                        minWidth: 500,
-                                        minHeight: 100,
-                                        spellcheck: false
-                                    }
-                                ],
-                                onsubmit: function(e) {
-                                    ed.insertContent('<code class="language-' + e.data.textboxName + '">' + ed.dom.encode(e.data.textboxCode) + '</code>');
                                 }
                             })
                         }
