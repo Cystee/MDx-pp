@@ -40,7 +40,6 @@ global $files_root;
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <?php if(mdx_get_option('mdx_safari')=="true"){?>
 <link rel="mask-icon" href="<?php echo mdx_get_option('mdx_svg');?>" color="<?php echo mdx_get_option('mdx_svg_color');?>">
-<link rel="manifest" href="<?php echo $files_root;?>/manifest.json">
 <?php }?>
 <?php if(mdx_get_option("mdx_title_med") == "diy"){?>
 <title itemprop="name"><?php global $page, $paged;wp_title('-', true, 'right');
@@ -101,5 +100,6 @@ if(get_post_meta($post->ID, "mdx_styles", true) === "white"){
 <meta name="mdx-main-color" content="<?php echo $mdx_theme_color;?>">
 <?php }?>
 <link rel="pingback" href="<?php bloginfo('pingback_url');?>">
+<link rel="manifest" href="<?php echo $files_root;?>/manifest.json">
 <?php wp_head(); ?><?php echo htmlspecialchars_decode(mdx_get_option('mdx_head_js'));?>
 </head>
