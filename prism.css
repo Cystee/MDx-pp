@@ -11,7 +11,7 @@ https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+cli
 .mdui-theme-layout-dark code[class*="language-"],
 pre[class*="language-"] {
     color: #ffffff;
-    font-family: Monaco, Consolas, DH, Minecraft, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-family: Monaco, Consolas, Source Code Pro, 微软雅黑, Microsoft Yahei UI, DH, Minecraft, 'Andale Mono', 'Ubuntu Mono', 'Arial', Terminal, 'Courier New', monospace;
     font-size: 1em;
     text-align: left;
     white-space: pre;
@@ -27,12 +27,13 @@ pre[class*="language-"] {
     -ms-hyphens: none;
     hyphens: none;
     outline: 0;
+    border: 0!important;
 }
 
 .mdui-theme-layout-auto code[class*="language-"],
 pre[class*="language-"] {
     color: #ffffff;
-    font-family: Monaco, Consolas, DH, Minecraft, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-family: Monaco, Consolas, Source Code Pro, 微软雅黑, Microsoft Yahei UI, DH, Minecraft, 'Andale Mono', 'Ubuntu Mono', 'Arial', Terminal, 'Courier New', monospace;
     font-size: 1em;
     text-align: left;
     white-space: pre;
@@ -48,12 +49,14 @@ pre[class*="language-"] {
     -ms-hyphens: none;
     hyphens: none;
     outline: 0;
+    border: 0!important;
 }
 
 .mdui-theme-layout-dark :not(pre)>code[class*="language-"] {
     padding: 2px 6px;
     border-radius: 4px;
     white-space: normal;
+    border: 0!important;
     box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -61,6 +64,7 @@ pre[class*="language-"] {
     padding: 2px 6px;
     border-radius: 4px;
     white-space: normal;
+    border: 0!important;
     box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -68,7 +72,7 @@ code[class*="language-"],
 pre[class*="language-"] {
     color: #ffffff;
     background: #303841;
-    font-family: Monaco, Consolas, DH, Minecraft, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-family: Monaco, Consolas, Source Code Pro, 微软雅黑, Microsoft Yahei UI, DH, Minecraft, 'Andale Mono', 'Ubuntu Mono', 'Arial', Terminal, 'Courier New', monospace;
     font-size: 1em;
     text-align: left;
     white-space: pre;
@@ -84,6 +88,7 @@ pre[class*="language-"] {
     -ms-hyphens: none;
     hyphens: none;
     outline: 0;
+    border: 0!important;
 }
 
 pre[class*="language-"]::-webkit-scrollbar-thumb {
@@ -99,8 +104,10 @@ pre[class*="language-"] {
     padding: 1em;
     margin: 0 0 20px 0;
     overflow: auto;
+    border: 0!important;
     border-radius: 8px;
     scrollbar-width: none;
+    box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12)!important
 }
 
 :not(pre)>code[class*="language-"],
@@ -115,6 +122,7 @@ pre[class*="language-"] {
     padding: 2px 6px;
     border-radius: 4px;
     white-space: normal;
+    border: 0!important;
     box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
