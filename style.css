@@ -61,52 +61,43 @@ Domain Path: /languages
 
 @font-face {
     font-family: MI;
-    src: url("fonts/MDx ++/MI.woff")
+    src: url("fonts/MDx ++/MI.woff");
+    font-display: swap
 }
 
 @font-face {
     font-family: Monaco;
-    src: local("Monaco"), url("fonts/MDx ++/Monaco.woff2")
+    src: local("Monaco"), url("fonts/MDx ++/Monaco.woff2");
+    font-display: swap
 }
 
 @font-face {
     font-family: Consolas;
     src: local("Consolas"), url("fonts/MDx ++/Consolas.woff2");
-    font-weight: 400
+    font-weight: 400;
+    font-display: swap
 }
 
 @font-face {
     font-family: Consolas;
     src: url("fonts/MDx ++/Consolas-Bold.woff2");
-    font-weight: 700
+    font-weight: 700;
+    font-display: swap
 }
 
 @font-face {
     font-family: Consolas;
     src: url("fonts/MDx ++/Consolas-Italic.woff2");
-    font-style: italic
+    font-style: italic;
+    font-display: swap
 }
 
 @font-face {
     font-family: Consolas;
     src: url("fonts/MDx ++/Consolas-BoldItalic.woff2");
     font-style: italic;
-    font-weight: 700
-}
-
-@font-face {
-    font-family: Minecraft;
-    src: local("Minecraft"), url("fonts/MDx ++/MinecraftSeven.woff2")
-}
-
-@font-face {
-    font-family: MinecraftTen;
-    src: local("Minecraft"), url("fonts/MDx ++/MinecraftTen.woff2")
-}
-
-@font-face {
-    font-family: DH;
-    src: local("Unifont"), url("fonts/MDx ++/DH.woff2")
+    font-weight: 700;
+    font-display: swap
 }
 
 .MathJax_Display {
