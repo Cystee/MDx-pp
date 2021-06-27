@@ -38,26 +38,26 @@
                     },
                     {
                         text: '其他语言行内代码',
-                        onclick: function () {
+                        onclick: function() {
                             ed.windowManager.open({
                                 title: '插入其他语言行内代码',
                                 body: [{
-                                    type: 'textbox',
-                                    name: 'textboxName',
-                                    label: '语言',
-                                    value: 'python'
-                                },
-                                {
-                                    type: 'textbox',
-                                    name: 'textboxCode',
-                                    label: '代码',
-                                    multiline: true,
-                                    minWidth: 500,
-                                    minHeight: 100,
-                                    spellcheck: false
-                                }
+                                        type: 'textbox',
+                                        name: 'textboxName',
+                                        label: '语言',
+                                        value: 'python'
+                                    },
+                                    {
+                                        type: 'textbox',
+                                        name: 'textboxCode',
+                                        label: '代码',
+                                        multiline: true,
+                                        minWidth: 500,
+                                        minHeight: 100,
+                                        spellcheck: false
+                                    }
                                 ],
-                                onsubmit: function (e) {
+                                onsubmit: function(e) {
                                     ed.insertContent('<code class="language-' + e.data.textboxName + '">' + ed.dom.encode(e.data.textboxCode) + '</code>');
                                 }
                             })
@@ -140,10 +140,10 @@
                         }
                     },
                     {
-                        text: 'MathJax 块',
+                        text: 'KaTeX 块',
                         onclick: function() {
                             ed.windowManager.open({
-                                title: '插入 MathJax 块',
+                                title: '插入 KaTeX 块',
                                 body: [{
                                     type: 'textbox',
                                     name: 'textboxCode',
@@ -159,10 +159,10 @@
                         }
                     },
                     {
-                        text: '行内 MathJax',
+                        text: '行内 KaTeX',
                         onclick: function() {
                             ed.windowManager.open({
-                                title: '插入行内 MathJax',
+                                title: '插入行内 KaTeX',
                                 body: [{
                                     type: 'textbox',
                                     name: 'textboxCode',
@@ -172,7 +172,7 @@
                                     spellcheck: false
                                 }],
                                 onsubmit: function(e) {
-                                    ed.insertContent('$(' + ed.dom.encode(e.data.textboxCode) + ')$');
+                                    ed.insertContent('\\(' + ed.dom.encode(e.data.textboxCode) + '\\)');
                                 }
                             })
                         }
@@ -192,9 +192,9 @@
                 },
             });
             ed.addButton('button_MJ', {
-                text: '引入 MathJax',
+                text: '引入 KaTeX',
                 onclick: function() {
-                    ed.selection.setContent('<script type="text/x-mathjax-config">MathJax.Hub.Config({showProcessingMessages:false,messageStyle:"none",jax:["input/Tex","output/HTML-CSS"],tex2jax:{inlineMath:[[\'\$\(\',\'\)\$\'],["\\(","\\)"]],displayMath:[[\'\$\$\',\'\$\$\'],["\\[","\\]"]],skipTags:["script","noscript","style","textarea","pre","code","a","kbd"]},"HTML-CSS":{showMathMenu:false},TeX:{equationNumbers:{autoNumber:"AMS",useLabelIds:true}},});</script><script src="wp-content/themes/mdx/MathJax-2.7.8/MathJax.js?config=TeX-AMS_HTML" async></script>');
+                    ed.selection.setContent('\<script async\>function dynamicLoadCss\(url\)\{var head\=document\.getElementsByTagName\(\'head\'\)\[0\]\;var link\=document\.createElement\(\'link\'\)\;link\.type\=\'text\/css\'\;link\.rel\=\'stylesheet\'\;link\.href\=url\;link\.crossorign\=\'anonymous\'\;head\.appendChild\(link\)\;\}dynamicLoadCss\(\"\/wp-content\/themes\/mdx\/Katex\/katex\.min\.css\"\)\;function dynamicLoadFont\(path\)\{ var head\=document\.getElementsByTagName\(\'head\'\)\[0\]\;var link\=document\.createElement\(\'link\'\)\;link\.rel\=\'preload\'\;link\.href\=path\;link\.as\=\'font\'\;link\.type\=\'font\/woff2\'\;link\.crossorign\=\'anonymous\'\;head\.appendChild\(link\)\;\}dynamicLoadFont\(\"\/wp-content\/themes\/mdx\/Katex\/fonts\/KaTeX_AMS-Regular\.woff2\"\)\;\<\/scrirpt\>\<script defer src\=\"\/wp-content\/themes\/mdx\/Katex\/katex\.min\.js\" crossorigin\=\"anonymous\"\>\<\/script\>');
                 },
             });
 
