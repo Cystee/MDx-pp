@@ -13,6 +13,12 @@ Domain Path: /languages
 
 /*!------CUSTOM------*/
 
+@media (orientation: landscape) and (max-width: 959.9px) {
+    .mdui-appbar .mdui-toolbar {
+        height: 64px!important;
+    }
+}
+
 .mdui-theme-layout-auto .mdui-typo code {
     color: #99cad7!important;
 }

@@ -55,32 +55,15 @@ if($site_description && (is_home() || is_front_page())) echo " - $site_descripti
     if(!empty($cpage) || !empty($commentPage)){
         echo '<meta name="robots" content="noindex, nofollow">';}}?>
 <?php if(!is_404()){?>
-<meta property="og:title" content="<?php global $page, $paged;wp_title('-', true, 'right');
-if($paged >= 2 || $page >= 2) echo ' - '.sprintf(__('第 %s 页'), max($paged, $page));?>">
-<meta property="og:type" content="article">
-<meta property="og:url" content="<?php global $wp;$mdx_current_url=mdx_get_now_url(is_single(), isset($post) ? (int)$post->ID : 0);echo $mdx_current_url;?>">
 <?php
 $mdx_des=mdx_get_option('mdx_seo_des');
 $mdx_s_key=mdx_get_option('mdx_seo_key');
 $mdx_a_des=mdx_get_option('mdx_auto_des');?>
 <meta property="og:description" content="<?php if(is_single()||is_page()){if(post_password_required()){_e('这篇文章受密码保护，输入密码后才能查看。', 'mdx');}else{echo mdx_get_post_excerpt($post, 100);}}else if($mdx_des!=''){echo $mdx_des;}else{bloginfo('description', 'display');}?>">
-<?php $mdx_index_img=mdx_get_option('mdx_index_img');if(!((!(is_single()||is_page()))&&substr($mdx_index_img,0,6)=="--Bing")){?>
-<meta property="og:image" content="<?php if(is_single()||is_page()){$mdx_post_img=wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'full');if(isset($mdx_post_img[0])){echo $mdx_post_img[0];}else{echo "";}}else{echo $mdx_index_img;}?>">
-<?php }?>
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="<?php wp_title('-', true, 'right');
-if($paged >= 2 || $page >= 2) echo ' - '.sprintf(__('第 %s 页'), max($paged, $page));?>">
-<meta name="twitter:description" content="<?php if(is_single()||is_page()){if(post_password_required()){_e('这篇文章受密码保护，输入密码后才能查看。', 'mdx');}else{echo mdx_get_post_excerpt($post, 100);}}else if($mdx_des!=''){echo $mdx_des;}else{bloginfo('description', 'display');}?>">
 <meta name="twitter:url" content="<?php echo $mdx_current_url;?>">
-<?php if(!((!(is_single()||is_page()))&&substr($mdx_index_img,0,6)=="--Bing")){?>
-<meta name="twitter:image" content="<?php if(is_single()||is_page()){if($mdx_post_img!==false&&$mdx_post_img[0]!=""){echo $mdx_post_img[0];}else{echo "";}}else{echo  $mdx_index_img;}?>">
 <?php }if($mdx_des!=''){if($mdx_a_des=='true'){if(is_single()||is_page()){?>
 <meta name="description" content="<?php if(post_password_required()){_e('这篇文章受密码保护，输入密码后才能查看。', 'mdx');}else{mdx_get_post_excerpt($post, 100);}?>">
-<?php }else{?>
-<meta name="description" content="<?php echo $mdx_des;?>">
-<?php }}else{?>
-<meta name="description" content="<?php echo $mdx_des;?>">
-<?php }}if($mdx_s_key!=''){?>
+<?php }}}if($mdx_s_key!=''){?>
 <meta name="keywords" content="<?php bloginfo('name');echo ','.$mdx_s_key;?>">
 <?php }}
 if(mdx_get_option('mdx_chrome_color')=='true'){
